@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "nav-bg": "#131315",
+        "appwrite-pink": "#131315",
       },
     },
   },
