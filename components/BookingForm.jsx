@@ -1,6 +1,4 @@
-import React from "react";
-
-function BookingForm() {
+const BookingForm = () => {
   return (
     <div className="mt-6">
       <h2 className="text-xl font-bold">Book this Room</h2>
@@ -79,6 +77,6 @@ function BookingForm() {
       </form>
     </div>
   );
-}
+};
 
 export default BookingForm;

@@ -30,10 +30,10 @@ const createSeesionClient = async (session) => {
   }
   return {
     get account() {
-      return new Account(adminClient);
+      return new Account(client);
     },
     get databases() {
-      return new Databases(adminClient);
+      return new Databases(client);
     },
   };
 };

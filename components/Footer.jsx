@@ -1,6 +1,4 @@
-import React from "react";
-
-function Footer() {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-nav-bg py-6">
@@ -11,6 +9,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

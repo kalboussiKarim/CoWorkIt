@@ -1,8 +1,7 @@
 "use server";
 
 import { createAdminClient } from "@/config/appwrite";
-import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 
 async function createSession(previousState, formData) {
   const email = formData.get("email");
@@ -13,8 +12,26 @@ async function createSession(previousState, formData) {
       error: "please fill out all fields",
     };
   }
+  const { account } = await createAdminClient();
+  try {
+    const session = await account.createEmailPasswordSession(email, password);
 
-  console.log(email, password);
+    cookies().set("appwrite-session", session.secret, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "strict",
+      expires: new Date(session.expire),
+      path: "/",
+    });
+    return {
+      success: true,
+    };
+  } catch (error) {
+    console.log("Authentication error", error);
+    return {
+      error: "Invalid Credentials",
+    };
+  }
 }
 
 export default createSession;

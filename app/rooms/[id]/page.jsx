@@ -1,4 +1,3 @@
-import React from "react";
 import Heading from "@/components/Heading";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +5,7 @@ import { FaChevronLeft } from "react-icons/fa";
 import BookingForm from "@/components/BookingForm";
 import getSingleRoom from "@/app/actions/getSingleRoom";
 
-async function RoomPage({ params }) {
+const RoomPage = async ({ params }) => {
   const { id } = params;
   const room = await getSingleRoom(id);
   if (!room) {
@@ -57,6 +56,6 @@ async function RoomPage({ params }) {
       <BookingForm />
     </div>
   );
-}
+};
 
 export default RoomPage;

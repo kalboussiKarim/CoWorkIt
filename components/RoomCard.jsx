@@ -1,8 +1,7 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-function RoomCard({ room }) {
+const RoomCard = ({ room }) => {
   return (
     <div className="bg-white shadow rounded-lg p-4 mt-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
       <div className="flex flex-col sm:flex-row sm:space-x-4">
@@ -39,6 +38,6 @@ function RoomCard({ room }) {
       </div>
     </div>
   );
-}
+};
 
 export default RoomCard;

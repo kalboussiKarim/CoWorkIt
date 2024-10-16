@@ -1,17 +1,26 @@
 "use client";
-
 import React from "react";
 import Link from "next/link";
 import { useFormState } from "react-dom";
 import { useEffect } from "react";
 import createSession from "../actions/createSession";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/authContext";
 
-function page() {
+const LoginPage = () => {
   const [state, formAction] = useFormState(createSession, {});
+  const router = useRouter();
+
+  const { isAutheticated, setIsAuthenticated } = useAuth();
 
   useEffect(() => {
     if (state.error) toast.error(state.error);
+    if (state.success) {
+      setIsAuthenticated(true);
+      toast.success("Logged in successfully !");
+      router.push("/");
+    }
   }, [state]);
 
   return (
@@ -34,6 +43,7 @@ function page() {
               id="email"
               name="email"
               className="border rounded w-full py-2 px-3"
+              required
             />
           </div>
 
@@ -49,6 +59,7 @@ function page() {
               id="password"
               name="password"
               className="border rounded w-full py-2 px-3"
+              required
             />
           </div>
 
@@ -71,6 +82,6 @@ function page() {
       </div>
     </div>
   );
-}
+};
 
-export default page;
+export default LoginPage;
