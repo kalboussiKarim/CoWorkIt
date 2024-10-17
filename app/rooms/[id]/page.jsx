@@ -6,11 +6,18 @@ import BookingForm from "@/components/BookingForm";
 import getSingleRoom from "@/app/actions/getSingleRoom";
 
 const RoomPage = async ({ params }) => {
+  const bucketId = process.env.NEXT_PUBLIC_APPWRITE_STORAGE_BUCKET_ROOMS;
+  const projectId = process.env.NEXT_PUBLIC_APPWRITE_PROJECT;
+
   const { id } = params;
   const room = await getSingleRoom(id);
   if (!room) {
     return <Heading title="Room Not Found" />;
   }
+
+  const imageUrl = `https://cloud.appwrite.io/v1/storage/buckets/${bucketId}/files/${room.image}/view?project=${projectId}`;
+  const imageSrc = room.image ? imageUrl : "/images/no-image.jpg";
+
   return (
     <div className="bg-white shadow rounded-lg p-6">
       <Link
@@ -22,8 +29,8 @@ const RoomPage = async ({ params }) => {
       </Link>
 
       <div className="flex flex-col sm:flex-row sm:space-x-6">
-        <img
-          src="images/rooms/room-1.jpg"
+        <Image
+          src={imageSrc}
           alt={room.name}
           width={400}
           height={100}
