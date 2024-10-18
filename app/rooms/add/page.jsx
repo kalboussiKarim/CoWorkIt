@@ -20,20 +20,17 @@ const AddRoomPage = () => {
   return (
     <>
       <Heading title="Add a room" />
-      <div className="bg-white shadow-lg rounded-lg p-6 w-full">
+      <div className="bg-nav-bg border border-white/40 rounded-lg p-6 w-full">
         <form action={formAction}>
           <div className="mb-4">
-            <label
-              htmlFor="name"
-              className="block text-gray-700 font-bold mb-2"
-            >
+            <label htmlFor="name" className="block text-white font-bold mb-2">
               Room Name
             </label>
             <input
               type="text"
               id="name"
               name="name"
-              className="border rounded w-full py-2 px-3"
+              className="border rounded w-full py-2 px-3 bg-nav-bg text-white"
               placeholder="Enter a name (Large Conference Room)"
               required
             />
@@ -42,32 +39,29 @@ const AddRoomPage = () => {
           <div className="mb-4">
             <label
               htmlFor="description"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Description
             </label>
             <textarea
               id="description"
               name="description"
-              className="border rounded w-full h-24 py-2 px-3"
+              className="border rounded w-full h-24 py-2 px-3 bg-nav-bg text-white"
               placeholder="Enter a description for the room"
               required
             ></textarea>
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="sqft"
-              className="block text-gray-700 font-bold mb-2"
-            >
+            <label htmlFor="sqft" className="block text-white font-bold mb-2">
               Square Feet
             </label>
             <input
               type="number"
               id="sqft"
               name="sqft"
-              className="border rounded w-full py-2 px-3"
-              placeholder="Enter room size in ft"
+              className="border rounded w-full py-2 px-3 bg-nav-bg text-white"
+              placeholder="Enter room size in m2"
               required
             />
           </div>
@@ -75,7 +69,7 @@ const AddRoomPage = () => {
           <div className="mb-4">
             <label
               htmlFor="capacity"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Capacity
             </label>
@@ -83,7 +77,7 @@ const AddRoomPage = () => {
               type="number"
               id="capacity"
               name="capacity"
-              className="border rounded w-full py-2 px-3"
+              className="border rounded w-full py-2 px-3 bg-nav-bg text-white"
               placeholder="Number of people the room can hold"
               required
             />
@@ -92,7 +86,7 @@ const AddRoomPage = () => {
           <div className="mb-4">
             <label
               htmlFor="price_per_hour"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Price Per Hour
             </label>
@@ -100,7 +94,7 @@ const AddRoomPage = () => {
               type="number"
               id="price_per_hour"
               name="price_per_hour"
-              className="border rounded w-full py-2 px-3"
+              className="border rounded w-full py-2 px-3 bg-nav-bg text-white"
               placeholder="Enter price per hour"
               required
             />
@@ -109,7 +103,7 @@ const AddRoomPage = () => {
           <div className="mb-4">
             <label
               htmlFor="address"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Address
             </label>
@@ -117,7 +111,7 @@ const AddRoomPage = () => {
               type="text"
               id="address"
               name="address"
-              className="border rounded w-full py-2 px-3"
+              className="border rounded w-full py-2 px-3 bg-nav-bg text-white"
               placeholder="Enter full address"
               required
             />
@@ -126,7 +120,7 @@ const AddRoomPage = () => {
           <div className="mb-4">
             <label
               htmlFor="location"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Location
             </label>
@@ -134,7 +128,7 @@ const AddRoomPage = () => {
               type="text"
               id="location"
               name="location"
-              className="border rounded w-full py-2 px-3"
+              className="border rounded w-full py-2 px-3 bg-nav-bg text-white"
               placeholder="Location (Building, Floor, Room)"
               required
             />
@@ -143,7 +137,7 @@ const AddRoomPage = () => {
           <div className="mb-4">
             <label
               htmlFor="availability"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Availability
             </label>
@@ -151,7 +145,7 @@ const AddRoomPage = () => {
               type="text"
               id="availability"
               name="availability"
-              className="border rounded w-full py-2 px-3"
+              className="border rounded w-full py-2 px-3 bg-nav-bg text-white"
               placeholder="Availability (Monday - Friday, 9am - 5pm)"
               required
             />
@@ -160,7 +154,7 @@ const AddRoomPage = () => {
           <div className="mb-4">
             <label
               htmlFor="amenities"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-white font-bold mb-2"
             >
               Amenities
             </label>
@@ -168,17 +162,14 @@ const AddRoomPage = () => {
               type="text"
               id="amenities"
               name="amenities"
-              className="border rounded w-full py-2 px-3"
-              placeholder="Amenities CSV (projector, whiteboard, etc.)"
+              className="border rounded w-full py-2 px-3 bg-nav-bg text-white"
+              placeholder="Amenities CSV  (projector, whiteboard, etc.)"
               required
             />
           </div>
 
           <div className="mb-8">
-            <label
-              htmlFor="image"
-              className="block text-gray-700 font-bold mb-2"
-            >
+            <label htmlFor="image" className="block text-white font-bold mb-2">
               Image
             </label>
 
@@ -186,14 +177,14 @@ const AddRoomPage = () => {
               type="file"
               id="image"
               name="image"
-              className="border rounded w-full py-2 px-3"
+              className="border rounded w-full py-2 px-3 text-white "
             />
           </div>
 
           <div className="flex flex-col gap-5">
             <button
               type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+              className="bg-appwrite-light-pink text-white px-4 py-2 rounded hover:bg-appwrite-dark-pink "
             >
               Save
             </button>

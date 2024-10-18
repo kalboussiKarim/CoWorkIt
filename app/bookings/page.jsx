@@ -9,7 +9,9 @@ const BookingsPage = async () => {
     <>
       <Heading title="My Bookings" />
       {bookings.length === 0 ? (
-        <p className="text-gray-600 mt-4">You have no bookings </p>
+        <div className="flex justify-center items-center h-[50vh]">
+          <p className="text-white">You have no bookings.</p>
+        </div>
       ) : (
         bookings.map((booking) => (
           <BookedRoomCard key={booking.$id} booking={booking} />

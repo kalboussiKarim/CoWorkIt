@@ -19,16 +19,16 @@ const RoomPage = async ({ params }) => {
   const imageSrc = room.image ? imageUrl : "/images/no-image.jpg";
 
   return (
-    <div className="bg-white shadow rounded-lg p-6">
+    <div className="bg-nav-bg border border-white/40 shadow rounded-lg p-6">
       <Link
         href="/"
         className="flex items-center text-gray-600 hover:text-gray-800 mb-4"
       >
-        <FaChevronLeft className="inline mr-1" />
-        <span className="ml-2">Back to Rooms</span>
+        <FaChevronLeft className="inline mr-1 text-[#DB1A5A]" />
+        <span className="ml-2 text-white">Back to Rooms</span>
       </Link>
 
-      <div className="flex flex-col sm:flex-row sm:space-x-6">
+      <div className="flex flex-col sm:flex-row sm:space-x-6 text-white">
         <Image
           src={imageSrc}
           alt={room.name}
@@ -38,23 +38,27 @@ const RoomPage = async ({ params }) => {
         />
 
         <div className="mt-4 sm:mt-0 sm:flex-1">
-          <p className="text-gray-600 mb-4">{room.description}</p>
+          <p className="text-lg mb-4">{room.description}</p>
 
-          <ul className="space-y-2">
-            <li>
-              <span className="font-semibold text-gray-800">Size:</span>{" "}
-              {room.sqft} sq ft
+          <ul className="space-y-2 text-sm">
+            <li className="text-gray-400">
+              <span className="font-semibold text-white text-lg">Size: </span>{" "}
+              {room.sqft} m2
             </li>
-            <li>
-              <span className="font-semibold text-gray-800">Availability:</span>
+            <li className="text-gray-400">
+              <span className="font-semibold text-white text-lg">
+                Availability:{" "}
+              </span>
               {room.availability}
             </li>
-            <li>
-              <span className="font-semibold text-gray-800">Price:</span>
+            <li className="text-gray-400">
+              <span className="font-semibold text-white text-lg">Price: </span>
               {room.price_per_hour}
             </li>
-            <li>
-              <span className="font-semibold text-gray-800">Address:</span>
+            <li className="text-gray-400">
+              <span className="font-semibold text-white text-lg">
+                Address:{" "}
+              </span>
               {room.address}
             </li>
           </ul>

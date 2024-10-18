@@ -19,9 +19,11 @@ export default function RootLayout({ children }) {
   return (
     <AuthWrapper>
       <html lang="en">
-        <body className={inter.className}>
+        <body
+          className={`${inter.className} bg-nav-bg min-h-screen flex flex-col`}
+        >
           <Header />
-          <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <main className="flex-grow max-w-7xl w-full px-4 py-6 sm:px-6 lg:px-8 mx-auto">
             {children}
           </main>
           <Footer />
@@ -34,7 +36,7 @@ export default function RootLayout({ children }) {
             pauseOnFocusLoss
             draggable
             pauseOnHover
-            theme="dark"
+            theme="light"
           />
         </body>
       </html>

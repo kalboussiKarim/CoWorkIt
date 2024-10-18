@@ -24,7 +24,7 @@ const Header = () => {
     }
   };
   return (
-    <header className="bg-nav-bg text-white">
+    <header className="bg-content-bg text-white border-b border-white/40">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-white">
         <div className="flex h-16 items-center justify-between text-white">
           <div className="flex items-center text-white">
@@ -72,14 +72,14 @@ const Header = () => {
                     href="/login"
                     className="mr-3 text-white hover:text-gray-400 "
                   >
-                    <FaSignInAlt className="inline mr-1" />
+                    <FaSignInAlt className="inline mr-1 text-[#DB1A5A]" />
                     Login
                   </Link>
                   <Link
                     href="/register"
                     className="mr-3 text-white hover:text-gray-400"
                   >
-                    <FaUser className="inline mr-1" /> Register
+                    <FaUser className="inline mr-1 text-[#DB1A5A]" /> Register
                   </Link>
                 </>
               )}
@@ -89,14 +89,16 @@ const Header = () => {
                     href="/rooms/my"
                     className="mr-3 text-white hover:text-gray-400"
                   >
-                    <FaBuilding className="inline mr-1" /> My Rooms
+                    <FaBuilding className="inline mr-1 text-[#DB1A5A]" /> My
+                    Rooms
                   </Link>
 
                   <button
                     className="mr-3 text-white hover:text-gray-400"
                     onClick={handleLogout}
                   >
-                    <FaSignOutAlt className="inline mr-1" /> Sign Out
+                    <FaSignOutAlt className="inline mr-1 text-[#DB1A5A]" /> Sign
+                    Out
                   </button>
                 </>
               )}
@@ -109,7 +111,7 @@ const Header = () => {
         <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
           <Link
             href="/"
-            className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+            className="block rounded-md px-3 py-2 text-sm font-medium  text-white hover:bg-gray-700 hover:text-white"
           >
             Rooms
           </Link>
@@ -117,13 +119,13 @@ const Header = () => {
             <>
               <Link
                 href="/bookings"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                className="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
               >
                 Bookings
               </Link>
               <Link
                 href="/rooms/add"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                className="block rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
               >
                 Add Room
               </Link>
