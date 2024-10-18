@@ -54,13 +54,13 @@ const RoomPage = async ({ params }) => {
               {room.price_per_hour}
             </li>
             <li>
-              <span className="font-semibold text-gray-800">Address:</span> 555
+              <span className="font-semibold text-gray-800">Address:</span>
               {room.address}
             </li>
           </ul>
         </div>
       </div>
-      <BookingForm />
+      <BookingForm room={room} />
     </div>
   );
 };
