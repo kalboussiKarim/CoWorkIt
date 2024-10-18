@@ -21,7 +21,7 @@ async function getMyBookings() {
         error: "You must be logged in to view bookings",
       };
     }
-
+    console.log("ha3: ", user.id);
     const { documents: bookings } = await databases.listDocuments(
       process.env.NEXT_PUBLIC_APPWRITE_DATABASE,
       process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_BOOKINGS,

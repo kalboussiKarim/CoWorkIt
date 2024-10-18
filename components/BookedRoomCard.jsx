@@ -8,9 +8,10 @@ const BookedRoomCard = ({ booking }) => {
     const date = new Date(dateString);
 
     const options = { month: "short" }; // long
-
     const month = date.toLocaleString("en-US", options, { timeZone: "UTC" });
+
     const day = date.getUTCDate();
+
     const timeOptions = {
       hour: "numeric",
       minute: "numeric",
