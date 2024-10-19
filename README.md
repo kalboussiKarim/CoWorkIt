@@ -16,10 +16,18 @@ You can access the live application here: [CoWorkIt](https://co-work-it.vercel.a
 
 ## Technologies Used
 
-- **Next.js**: React framework for building server-rendered and static web applications.
-- **Appwrite**: Backend server for authentication, database, and file management.
-- **Tailwind CSS**: Utility-first CSS framework for styling the components.
-- **Vercel**: Hosting and deployment platform.
+- **Next.js**  
+  ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+  
+- **Appwrite**  
+  ![Appwrite](https://img.shields.io/badge/Appwrite-F02E65?style=for-the-badge&logo=appwrite&logoColor=white)
+
+- **Tailwind CSS**  
+  ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+- **Vercel**  
+  ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
 
 ## Installation
 
