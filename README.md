@@ -2,6 +2,10 @@
 
 **CoWorkIt** is a platform where users can book coworking spaces and rooms for meetings, conferences, or creative work. Users can explore available rooms and book them. To post or book a room, users must be signed in. The app ensures that rooms can't be booked by multiple users simultaneously.
 
+## Live Demo
+
+You can access the live application here: [CoWorkIt](https://co-work-it.vercel.app/)
+
 ## Features
 
 - **User Authentication**: Secure sign-in and registration using Appwrite authentication.
